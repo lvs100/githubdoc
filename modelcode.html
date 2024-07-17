@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>model code</title>
+    <link rel="stylesheet" href="../../../dist/output.css">
+    <script src="../jquery.js"></script>
+</head>
+<body>
+    <p class="flex justify-between items-center">
+        <h1 class="text-3xl font-bold mx-10 p-4 px-4 flex ">
+            Recipes
+        </h1>
+        <h2 class="flex text-red-400 justify-end mx-auto mr-20 sm:mr-8 sm:-mt-4 font-[monospace]" id="log">
+            log in Sign up
+        </h2>
+        </p>
+       
+            <main class="" id="c">
+
+            </main>
+</body>
+</html>
+<script>
+    let log = $("#form")
+    $("#form").hide();
+    $("#log").click(() => {
+        $("#form").toggle("");
+    }
+    );
+    
+    $.ajax({
+    url: "restoess.html",
+    method: 'get',
+    data: {},
+    success: function (data) {
+      $("#c").html(data)
+    }
+  });
+
+</script>
